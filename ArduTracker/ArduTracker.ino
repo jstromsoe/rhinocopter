@@ -2,6 +2,7 @@
 // by BARRAGAN <http://barraganstudio.com> 
 // This example code is in the public domain.
 // Modified by Jeremy Stromsoe for 5:1 pan servo
+// Added this comment to test git hub repo
 
 
 #include <Servo.h> 
