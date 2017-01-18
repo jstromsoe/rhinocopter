@@ -12,8 +12,8 @@ Servo tilt; // tilt servo
 
 // Pin 13 has an LED connected on most Arduino boards.
 int led = 13;
-long lastTilt = 82L;
-long lastPan = 50L;
+long lastTilt = 83L;
+long lastPan = 1500L;
 int dir = 1;
 int pos = 0;
 int tiltDelay = 15;
@@ -114,7 +114,8 @@ void loop()
            }
          
            interpVal = ((tiltVal-minPWM) * 90) / (maxPWM-minPWM);  
-           
+           //interpVal = interpVal*5;
+           interpVal = -1*((interpVal*(0.8))-90); 
             if (interpVal > 90)
             {
               interpVal = 90;
