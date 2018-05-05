@@ -16,7 +16,7 @@ long lastTilt = 83L;
 long lastPan = 1500L;
 int dir = 1;
 int pos = 0;
-int tiltDelay = 15;
+int tiltDelay = 50;
 long minPWM = 1000L;
 long maxPWM = 2000L;
 long panVal = 0L;
@@ -115,7 +115,7 @@ void loop()
          
            interpVal = ((tiltVal-minPWM) * 90) / (maxPWM-minPWM);  
            //interpVal = interpVal*5;
-           interpVal = -1*((interpVal*(0.8))-90); 
+           interpVal = -1*((interpVal*(2.15))-140); 
             if (interpVal > 90)
             {
               interpVal = 90;
